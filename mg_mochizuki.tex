@@ -1,4 +1,6 @@
 \documentclass[9pt]{beamer}
+% \documentclass[9pt]{article}
+% \usepackage[noxcolor]{beamerarticle}
 \usepackage[utf8]{inputenc}
 \usepackage{CJKutf8} %japanese
 \usepackage{tikz, tikz-cd}
@@ -7,11 +9,12 @@
 \usepackage{ragged2e}
 \usepackage{amsmath, amssymb}
 \usepackage{wrapfig}
-\usepackage{pifont} 
+\usepackage{pifont}
 
 \usetheme{Warsaw}
 \usecolortheme{default}
 \usefonttheme{structuresmallcapsserif}
+
 
 %definitions
 %============================================================
@@ -20,7 +23,7 @@
 \subtitle{
     \textit{Mathematical proof that rocked number theory}}
     
-\author{M.~Gruszczyński\inst{1} \and B.~Nems\inst{1}}
+\author{M.~Gruszczyński\inst{1}}
     \institute[WMiI]{
         \inst{1}%
         Faculty of Mathematics and Computer Science\\Uniwersity of Lodz}
@@ -69,7 +72,10 @@
                 \column{0.80\textwidth}
                     \justify
                     Mochizuki is a Japanese mathematician working in number theory and arithmetic geometry. He is one of the main contributors to anabelian geometry. His contributions include his solution of the Grothendieck conjecture in anabelian geometry about hyperbolic curves over number fields. Mochizuki has also worked in Hodge–Arakelov theory and p-adic Teichmüller theory. \\\vspace{0.50cm}
-                    Mochizuki developed inter-universal Teichmüller theory, which has attracted a high level of attention of non-mathematicians due to claims it provides a resolution of the \hyperlink{abc}{\beamerbutton{abc conjecture}} (also known as Oesterl ́e–Masser conjecture).
+                    Mochizuki developed inter-universal Teichmüller theory, which has attracted a high level of attention of non-mathematicians due to claims it provides a resolution of the \hyperlink{abc}{\beamerbutton{abc conjecture}} (also known as Oesterl ́e–Masser conjecture).\\\vspace{0.50cm}
+                    \only<article>{
+                        Mochizuki entered Princeton University as an undergraduate at age 16 and graduated PhD salutatorian in 1988. After his PhD, Mochizuki spent two years at Harvard and then in 1994 moved back to Japan to join the Research Institute for Mathematical Sciences (RIMS) at Kyoto University in 1992, and was promoted to professor in 2002.
+                    }
                 \pause
                 \column{0.15\textwidth}
                     \href{https://en.wikipedia.org/wiki/Shinichi_Mochizuki}{
@@ -78,7 +84,6 @@
                     \href{https://www.kurims.kyoto-u.ac.jp/~motizuki/top-english.html}{
                         \includegraphics[width=1.25cm, height=1.25cm]{images/home.png}}
             \end{columns}
-        
         \end{frame}
 
         %----------------------------------------------------
@@ -87,7 +92,7 @@
             \frametitle{ABC Conjecture}
             \begin{block}{Theory}
                 For any real number $\epsilon > 0$, there exists a real number $K_{\epsilon} > 0$ such that
-                $$c < K\epsilon \cdot \text{rad}(abc)^{1+\epsilon}$$
+                $$c < K\epsilon \cdot \mathbf{rad}(abc)^{1+\epsilon}$$
                 for any $abc$ triple $(a, b, c)$.
             \end{block}
             The conjecture says that $abc$ cannot have \textit{“too many”}repeated prime factors of \textit{“high multiplicity”} if $a + b = c,\text{ } gcd(a, b) = 1.$
@@ -95,8 +100,13 @@
             \begin{example}
                 For now the highest-quality triple (with a particularly small radical relative to $c$) is given below:\\\vspace{0.25cm}
                 $a = 2$, $b = 3^{10} \cdot 109 = 6436341$, $c = 23^5 = 6436343$\\
-                rad$(abc) = 2\cdot 3\cdot 109\cdot 25 =15042$
+                $\mathbf{rad}(abc) = 2\cdot 3\cdot 109\cdot 25 =15042$
             \end{example}
+            \\\vspace{0.50cm}
+            \only<article>{
+                The abc conjecture expresses a profound link between the addition and multiplication of integer numbers. Any integer can be factored into prime numbers, its ‘divisors’: for example, 60 = 5 x 3 x 2 x 2. The conjecture roughly states that if a lot of small primes divide two numbers a and b, then only a few, large ones divide their sum, c.\\
+                A proof, if confirmed, could change the face of number theory, by, for example, providing an innovative approach to proving Fermat’s last theorem, the legendary problem formulated by Pierre de Fermat in 1637 and solved only in 1994.
+            }
         \end{frame}
         
         %----------------------------------------------------
@@ -184,6 +194,10 @@
                         \includegraphics[width=1.8cm,height=2cm]{images/photo.jpg}\\
                         % \end{wrapfigure}
                     \end{centering}
+                    \\\vspace{0.50cm}
+                    \only<article>{
+                        Kyoto University has generated 5 prime ministers of Japan to date, and is famed for producing world-class researchers. As of October 2019, 19 Nobel Prize laureates, 2 Fields medalists, and 1 Gauss Prize winner have been affiliated with Kyoto University, giving it the most Nobel laureates of all universities in Asia. Apart from distinguished politicians and scholars, the university also counts in its alumni esteemed medical and legal professionals, writers, artists, and business leaders.
+                    }
             \end{columns}
         \end{frame}
         
@@ -209,7 +223,7 @@
             \begin{center}
                 Thanks for the attention!\\\vspace{0.25cm}
                 \includegraphics[width=8cm,height=4cm]{images/photo2.jpg}\\\vspace{0.25cm}
-                \hyperlink{init}{\beamerbutton{\start again \ding{242}}}\\
+                \hyperlink{init}{\beamerbutton{start again \ding{220}}}\\
             \end{center}
         \end{frame}
     
